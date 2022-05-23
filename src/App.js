@@ -12,9 +12,11 @@ function App() {
 		},
 	]);
 
+	const handleSubmit = () => {};
+
 	const addTodo = () => {
 		console.log("added");
-		setTodos(...todos, id, todoName, desc, activityStatus);
+		// setTodos(...todos, id, todoName, desc, activityStatus);
 	};
 
 	const removeTodo = (id) => {
