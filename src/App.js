@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import TodoContainer from "./components/TodoContainer";
+import UpdateTodo from "./components/UpdateTodo";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [todos, setTodos] = useState([
+		{
+			id: Date.now(),
+			todoName: "",
+			desc: "",
+			activityStatus: false,
+		},
+	]);
+
+	const addTodo = () => {
+		// setTodos(...todos, id, todoName, desc, activityStatus);
+		console.log("added");
+	};
+
+	const removeTodo = (id) => {
+		console.log("removed");
+		{
+			/*  setTodos(
+   ) */
+		}
+	};
+
+	return (
+		<div>
+			<h1>TODO APP</h1>
+			<UpdateTodo
+				todos={todos}
+				setTodos={setTodos}
+				addTodo={addTodo}
+				removeTodo={removeTodo}
+			/>
+			<TodoContainer todos={todos} removeTodo={removeTodo} />
+		</div>
+	);
 }
 
 export default App;
