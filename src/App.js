@@ -11,7 +11,7 @@ function App() {
 
 	return (
 		<div>
-			<h1>TODO APP</h1>
+			<h1 className="text-3xl font-bold underline">TODO APP</h1>
 			<UpdateTodo todos={todos} setTodos={setTodos} removeTodo={removeTodo} />
 			<TodoContainer
 				todos={todos}
