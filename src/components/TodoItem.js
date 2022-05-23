@@ -6,8 +6,8 @@ const TodoItem = ({ todos, removeTodo, setTodos }) => {
 			initialTodo.map((todo) => {
 				if (todo.id === id) {
 					return { ...todo, activityStatus: e.target.checked };
-					return todo;
 				}
+				return todo;
 			}),
 		);
 	};
