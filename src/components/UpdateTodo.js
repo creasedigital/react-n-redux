@@ -14,7 +14,7 @@ const UpdateTodo = ({ setTodos, todos }) => {
 				id: Date.now(),
 				name: todoInfo.name,
 				desc: todoInfo.desc,
-				activityStatus: true,
+				activityStatus: false,
 			},
 		]);
 		setTodoInfo({ name: "", desc: "" });

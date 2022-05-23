@@ -1,4 +1,17 @@
-const TodoItem = ({ todos, removeTodo }) => {
+import { useState } from "react";
+
+const TodoItem = ({ todos, removeTodo, setTodos }) => {
+	const handleCheck = (e, id) => {
+		setTodos((initialTodo) =>
+			initialTodo.map((todo) => {
+				if (todo.id === id) {
+					return { ...todo, activityStatus: e.target.checked };
+					return todo;
+				}
+			}),
+		);
+	};
+
 	console.log(todos);
 	const todoList = todos.length ? (
 		todos.map((todo) => (
@@ -8,8 +21,8 @@ const TodoItem = ({ todos, removeTodo }) => {
 				<div>
 					<input
 						type="checkbox"
-						onChange={!todo.activityStatus}
-						checked={todo.activityStatus}
+						onChange={(e) => handleCheck(e, todo.id)}
+						checked={todo.activity}
 					/>
 					<span>Status: {todo.activityStatus ? "Done" : "Pending"}</span>
 					<button onClick={() => removeTodo(todo.id)}>Remove</button>

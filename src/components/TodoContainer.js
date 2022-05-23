@@ -1,9 +1,9 @@
 import TodoItem from "./TodoItem";
 
-const todoContainer = ({ todos, removeTodo }) => {
+const todoContainer = ({ todos, removeTodo, setTodos }) => {
 	return (
 		<div>
-			<TodoItem todos={todos} removeTodo={removeTodo} />
+			<TodoItem todos={todos} removeTodo={removeTodo} setTodos={setTodos} />
 		</div>
 	);
 };

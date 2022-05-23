@@ -5,11 +5,7 @@ import UpdateTodo from "./components/UpdateTodo";
 function App() {
 	const [todos, setTodos] = useState([]);
 
-	const handleSubmit = () => {};
-
 	const removeTodo = (id) => {
-		console.log("removed", id);
-		console.log(todos);
 		setTodos((initialTodos) => initialTodos.filter((todo) => todo.id !== id));
 	};
 
@@ -17,7 +13,11 @@ function App() {
 		<div>
 			<h1>TODO APP</h1>
 			<UpdateTodo todos={todos} setTodos={setTodos} removeTodo={removeTodo} />
-			<TodoContainer todos={todos} removeTodo={removeTodo} />
+			<TodoContainer
+				todos={todos}
+				removeTodo={removeTodo}
+				setTodos={setTodos}
+			/>
 		</div>
 	);
 }
