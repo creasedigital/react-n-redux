@@ -3,37 +3,20 @@ import TodoContainer from "./components/TodoContainer";
 import UpdateTodo from "./components/UpdateTodo";
 
 function App() {
-	const [todos, setTodos] = useState([
-		{
-			id: Date.now(),
-			todoName: "",
-			desc: "",
-			activityStatus: false,
-		},
-	]);
+	const [todos, setTodos] = useState([]);
 
 	const handleSubmit = () => {};
 
-	const addTodo = () => {
-		console.log("added");
-		// setTodos(...todos, id, todoName, desc, activityStatus);
-	};
-
 	const removeTodo = (id) => {
 		console.log("removed", id);
-		const todos = todos.filter((todo) => todo.id !== id);
-		setTodos(todos);
+		console.log(todos);
+		setTodos((initialTodos) => initialTodos.filter((todo) => todo.id !== id));
 	};
 
 	return (
 		<div>
 			<h1>TODO APP</h1>
-			<UpdateTodo
-				todos={todos}
-				setTodos={setTodos}
-				addTodo={addTodo}
-				removeTodo={removeTodo}
-			/>
+			<UpdateTodo todos={todos} setTodos={setTodos} removeTodo={removeTodo} />
 			<TodoContainer todos={todos} removeTodo={removeTodo} />
 		</div>
 	);

@@ -1,24 +1,40 @@
-// import {useState}
+import { useState } from "react";
 
-const UpdateTodo = ({ setTodos, addTodo, todos }) => {
-	const handleChange = (e) => setTodos(e.target.value);
+const UpdateTodo = ({ setTodos, todos }) => {
+	const [todoInfo, setTodoInfo] = useState({ name: "", desc: "" });
 
+	const handleChange = (e) => {
+		setTodoInfo({ ...todoInfo, [e.target.id]: e.target.value });
+	};
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		setTodos([
+			...todos,
+			{
+				id: Date.now(),
+				name: todoInfo.name,
+				desc: todoInfo.desc,
+				activityStatus: true,
+			},
+		]);
+		setTodoInfo({ name: "", desc: "" });
+	};
 	return (
 		<div>
-			<form>
+			<form onSubmit={handleSubmit}>
 				<input
 					type="text"
 					id="name"
-					// value={todos.todoName}
+					value={todoInfo.name}
 					onChange={handleChange}
 				/>
 				<input
 					type="text"
 					id="desc"
-					// value={todos.desc}
+					value={todoInfo.desc}
 					onChange={handleChange}
 				/>
-				<button onClick={addTodo}>ADD TODO</button>
+				<button>ADD TODO</button>
 			</form>
 		</div>
 	);
