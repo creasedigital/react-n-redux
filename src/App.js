@@ -13,16 +13,14 @@ function App() {
 	]);
 
 	const addTodo = () => {
-		// setTodos(...todos, id, todoName, desc, activityStatus);
 		console.log("added");
+		setTodos(...todos, id, todoName, desc, activityStatus);
 	};
 
 	const removeTodo = (id) => {
-		console.log("removed");
-		{
-			/*  setTodos(
-   ) */
-		}
+		console.log("removed", id);
+		const todos = todos.filter((todo) => todo.id !== id);
+		setTodos(todos);
 	};
 
 	return (
