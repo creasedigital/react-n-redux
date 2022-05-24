@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const TodoItem = ({ todos, removeTodo, setTodos }) => {
 	const handleCheck = (e, id) => {
 		setTodos((initialTodo) =>

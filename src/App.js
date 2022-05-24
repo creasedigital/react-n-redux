@@ -10,8 +10,10 @@ function App() {
 	};
 
 	return (
-		<div>
-			<h1 className="text-3xl font-bold underline">TODO APP</h1>
+		<div className="">
+			<h1 className="text-5xl mb-2 bg-cyan-100 py-5 text-cyan-900 text-center">
+				TODO APP
+			</h1>
 			<UpdateTodo todos={todos} setTodos={setTodos} removeTodo={removeTodo} />
 			<TodoContainer
 				todos={todos}
