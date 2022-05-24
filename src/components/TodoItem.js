@@ -17,15 +17,17 @@ const TodoItem = ({ todos, removeTodo, setTodos }) => {
 				className="border rounded-lg mb-4 p-4 dark:bg-slate-800 bg-slate-200"
 				key={todo.id}
 			>
-				<h3>{todo.name}</h3>
-				<p>{todo.desc}</p>
-				<div>
-					<input
-						type="checkbox"
-						onChange={(e) => handleCheck(e, todo.id)}
-						checked={todo.activity}
-					/>
-					<span>Status: {todo.activityStatus ? "Done" : "Pending"}</span>
+				<h3 className="font-bold">{todo.name}</h3>
+				<p className="italic my-1">{todo.desc}</p>
+				<div className="flex justify-between">
+					<div>
+						<input
+							type="checkbox"
+							onChange={(e) => handleCheck(e, todo.id)}
+							checked={todo.activity}
+						/>
+						<span>Status: {todo.activityStatus ? "Done" : "Pending"}</span>
+					</div>
 					<button onClick={() => removeTodo(todo.id)}>Remove</button>
 				</div>
 			</div>

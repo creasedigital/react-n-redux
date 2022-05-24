@@ -25,7 +25,7 @@ const UpdateTodo = ({ setTodos, todos }) => {
 				<div className="mb-4  w-1/2 m-auto flex flex-col">
 					<label
 						htmlFor="name"
-						className="text-cyan-900 dark:text-cyan-300 mb-2 font-bold "
+						className="text-cyan-900 dark:text-cyan-300 mb-2 font-bold  "
 					>
 						Enter A Task:
 					</label>
@@ -34,7 +34,7 @@ const UpdateTodo = ({ setTodos, todos }) => {
 						id="name"
 						value={todoInfo.name}
 						onChange={handleChange}
-						className="bg-cyan-100 py-4 focus:outline-none "
+						className="bg-cyan-100 py-4 focus:outline-none p-4"
 					/>
 				</div>
 				<div className="mb-4  w-1/2 m-auto flex flex-col">
@@ -53,7 +53,7 @@ const UpdateTodo = ({ setTodos, todos }) => {
 					/>
 				</div>
 				<div className="mb-4 m-auto w1/2">
-					<button className="text-center bg-cyan-900 text-white  px-16 py-4">
+					<button className="text-center bg-cyan-900 text-white px-8 md:px-12 lg:px-16 py-4">
 						ADD TODO
 					</button>
 				</div>
