@@ -39,7 +39,7 @@ const UpdateTodo = ({ setTodos, todos }) => {
 						id="name"
 						value={todoInfo.name}
 						onChange={handleChange}
-						className="bg-cyan-100 py-4 focus:outline-none p-4"
+						className="bg-cyan-100 text-slate-900 py-4 focus:outline-none p-4"
 					/>
 				</div>
 				<div className="mb-4  w-1/2 m-auto flex flex-col">
@@ -54,7 +54,7 @@ const UpdateTodo = ({ setTodos, todos }) => {
 						id="desc"
 						value={todoInfo.desc}
 						onChange={handleChange}
-						className="bg-cyan-100 py-4 focus:outline-none p-4"
+						className="bg-cyan-100 text-slate-900 py-4 focus:outline-none p-4"
 					/>
 				</div>
 				<div className="mb-4 m-auto w1/2">
