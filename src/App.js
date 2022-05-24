@@ -1,13 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TodoContainer from "./components/TodoContainer";
 import UpdateTodo from "./components/UpdateTodo";
 
 function App() {
-	const [todos, setTodos] = useState([]);
+	// const sessionData = sessionStorage.getItem("todos");
+	// return sessionData ? JSON.parse(sessionData) : [];
+
+	const [todos, setTodos] = useState(
+		JSON.parse(sessionStorage.getItem("todos")) || [],
+	);
 
 	const removeTodo = (id) => {
 		setTodos((initialTodos) => initialTodos.filter((todo) => todo.id !== id));
 	};
+
+	useEffect(() => {
+		sessionStorage.setItem("todos", JSON.stringify(todos));
+	}, [todos]);
 
 	return (
 		<div className="">
