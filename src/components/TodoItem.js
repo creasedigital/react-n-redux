@@ -14,12 +14,12 @@ const TodoItem = ({ todos, removeTodo, setTodos }) => {
 	const todoList = todos.length ? (
 		todos.map((todo) => (
 			<div
-				className="border rounded-lg mb-4 p-4 dark:bg-slate-800 bg-slate-200"
+				className="border rounded-lg mb-4 p-2 dark:bg-slate-800 bg-slate-200"
 				key={todo.id}
 			>
-				<h3 className="font-bold">{todo.name}</h3>
-				<p className="italic my-1">{todo.desc}</p>
-				<div className="flex justify-between">
+				{todo.name && <h3 className={`font-bold text-lg `}>{todo.name}</h3>}
+				{todo.desc && <p className="italic my-1 p-4 ">{todo.desc}</p>}
+				<div className="flex justify-between items-center px-4">
 					<div>
 						<input
 							type="checkbox"
@@ -28,7 +28,12 @@ const TodoItem = ({ todos, removeTodo, setTodos }) => {
 						/>
 						<span>Status: {todo.activityStatus ? "Done" : "Pending"}</span>
 					</div>
-					<button onClick={() => removeTodo(todo.id)}>Remove</button>
+					<button
+						className="text-center bg-cyan-900 text-white px-4 py-1"
+						onClick={() => removeTodo(todo.id)}
+					>
+						Remove
+					</button>
 				</div>
 			</div>
 		))

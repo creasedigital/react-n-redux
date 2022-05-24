@@ -49,11 +49,14 @@ const UpdateTodo = ({ setTodos, todos }) => {
 						id="desc"
 						value={todoInfo.desc}
 						onChange={handleChange}
-						className="bg-cyan-100 py-4 focus:outline-none "
+						className="bg-cyan-100 py-4 focus:outline-none p-4"
 					/>
 				</div>
 				<div className="mb-4 m-auto w1/2">
-					<button className="text-center bg-cyan-900 text-white px-8 md:px-12 lg:px-16 py-4">
+					<button
+						disabled={todoInfo.name && todoInfo.desc ? false : true}
+						className="text-center bg-cyan-900 text-white px-8 md:px-12 lg:px-16 py-4"
+					>
 						ADD TODO
 					</button>
 				</div>
