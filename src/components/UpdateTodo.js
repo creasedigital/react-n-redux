@@ -21,19 +21,26 @@ const UpdateTodo = ({ setTodos, todos }) => {
 	};
 	return (
 		<div>
-			<form onSubmit={handleSubmit}>
-				<input
-					type="text"
-					id="name"
-					value={todoInfo.name}
-					onChange={handleChange}
-				/>
-				<input
-					type="text"
-					id="desc"
-					value={todoInfo.desc}
-					onChange={handleChange}
-				/>
+			<form onSubmit={handleSubmit} className="text-center mt-4">
+				<div>
+					<label htmlFor="name">Task</label>
+					<input
+						type="text"
+						id="name"
+						value={todoInfo.name}
+						onChange={handleChange}
+						className="bg-cyan-100 px-20 py-4 "
+					/>
+				</div>
+				<div>
+					<label htmlFor="desc">Task</label>
+					<input
+						type="text"
+						id="desc"
+						value={todoInfo.desc}
+						onChange={handleChange}
+					/>
+				</div>
 				<button>ADD TODO</button>
 			</form>
 		</div>
