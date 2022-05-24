@@ -4,10 +4,15 @@ const UpdateTodo = ({ setTodos, todos }) => {
 	const [todoInfo, setTodoInfo] = useState({ name: "", desc: "" });
 
 	const handleChange = (e) => {
+		if (!e.target.value) return;
 		setTodoInfo({ ...todoInfo, [e.target.id]: e.target.value });
 	};
 	const handleSubmit = (e) => {
+		// if (!todoInfo.name || !todoInfo.desc) return;
 		e.preventDefault();
+		// console.log(todoInfo.name, todoInfo.desc);
+		if (todoInfo.name.trim().length === 0 || todoInfo.desc.trim().length === 0)
+			return;
 		setTodos([
 			...todos,
 			{
@@ -54,7 +59,7 @@ const UpdateTodo = ({ setTodos, todos }) => {
 				</div>
 				<div className="mb-4 m-auto w1/2">
 					<button
-						disabled={todoInfo.name && todoInfo.desc ? false : true}
+						disabled={todoInfo.name || todoInfo.desc ? false : true}
 						className="text-center bg-cyan-900 text-white px-8 md:px-12 lg:px-16 py-4"
 					>
 						ADD TODO

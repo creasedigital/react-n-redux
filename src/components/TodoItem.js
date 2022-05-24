@@ -10,7 +10,6 @@ const TodoItem = ({ todos, removeTodo, setTodos }) => {
 		);
 	};
 
-	console.log(todos);
 	const todoList = todos.length ? (
 		todos.map((todo) => (
 			<div
