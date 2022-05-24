@@ -13,7 +13,7 @@ const TodoItem = ({ todos, removeTodo, setTodos }) => {
 	const todoList = todos.length ? (
 		todos.map((todo) => (
 			<div
-				className="border rounded-lg mb-4 p-2 dark:bg-slate-800 bg-slate-200"
+				className="border hover:border-cyan-600 rounded-lg mb-4 p-2 dark:bg-slate-800 bg-slate-200"
 				key={todo.id}
 			>
 				{todo.name && <h3 className={`font-bold text-lg `}>{todo.name}</h3>}
@@ -25,10 +25,12 @@ const TodoItem = ({ todos, removeTodo, setTodos }) => {
 							onChange={(e) => handleCheck(e, todo.id)}
 							checked={todo.activity}
 						/>
-						<span>Status: {todo.activityStatus ? "Done" : "Pending"}</span>
+						<span className="pl-1">
+							Status: {todo.activityStatus ? "Done" : "Pending"}
+						</span>
 					</div>
 					<button
-						className="text-center rounded-md bg-cyan-900 text-white px-4 py-1"
+						className="text-center rounded-md hover:bg-cyan-700 hover:text-gray-200 bg-cyan-900 text-white px-4 py-1"
 						onClick={() => removeTodo(todo.id)}
 					>
 						Remove
@@ -37,7 +39,7 @@ const TodoItem = ({ todos, removeTodo, setTodos }) => {
 			</div>
 		))
 	) : (
-		<p className="pt-4">Nothing's Here!</p>
+		<p className="pt-4">Nothing is here! Please add a task...</p>
 	);
 
 	return <div className="pt-4">{todoList}</div>;
