@@ -37,10 +37,10 @@ const TodoItem = ({ todos, removeTodo, setTodos }) => {
 			</div>
 		))
 	) : (
-		<p>Nothing's Here!</p>
+		<p className="pt-4">Nothing's Here!</p>
 	);
 
-	return <>{todoList}</>;
+	return <div className="pt-4">{todoList}</div>;
 };
 
 export default TodoItem;

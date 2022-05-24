@@ -60,7 +60,7 @@ const UpdateTodo = ({ setTodos, todos }) => {
 				<div className="mb-4 m-auto w1/2">
 					<button
 						disabled={todoInfo.name || todoInfo.desc ? false : true}
-						className="text-center bg-cyan-900 text-white px-8 md:px-12 lg:px-16 py-4"
+						className="text-center bg-cyan-900 text-white px-8 md:px-12 lg:px-16 py-4 hover:bg-cyan-700 hover:text-gray-200"
 					>
 						ADD TODO
 					</button>
