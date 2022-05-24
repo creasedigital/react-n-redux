@@ -19,8 +19,8 @@ function App() {
 	}, [todos]);
 
 	return (
-		<div className="">
-			<h1 className="text-5xl mb-2 bg-cyan-100 py-5 text-cyan-900 text-center">
+		<div className="bg-white dark:bg-slate-900 text-cyan-900  dark:text-slate-100">
+			<h1 className="text-5xl mb-2 py-5 text-cyan-900  dark:text-slate-100 text-center">
 				TODO APP
 			</h1>
 			<UpdateTodo todos={todos} setTodos={setTodos} removeTodo={removeTodo} />

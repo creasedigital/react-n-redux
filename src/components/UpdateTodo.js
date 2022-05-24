@@ -21,9 +21,12 @@ const UpdateTodo = ({ setTodos, todos }) => {
 	};
 	return (
 		<div>
-			<form onSubmit={handleSubmit} className="text-center mt-4">
+			<form onSubmit={handleSubmit} className="text-center p-8 mt-4">
 				<div className="mb-4">
-					<label htmlFor="name" className="text-cyan-900 mr-4 font-bold ">
+					<label
+						htmlFor="name"
+						className="text-cyan-900 dark:text-cyan-300 pr-4 font-bold "
+					>
 						Enter A Task:
 					</label>
 					<input
@@ -31,11 +34,14 @@ const UpdateTodo = ({ setTodos, todos }) => {
 						id="name"
 						value={todoInfo.name}
 						onChange={handleChange}
-						className="bg-cyan-100 px-20 py-4"
+						className="bg-cyan-100 px-20 py-4 focus:outline-none "
 					/>
 				</div>
 				<div className="mb-4">
-					<label htmlFor="desc" className="text-cyan-900 mr-4 font-bold ">
+					<label
+						htmlFor="desc"
+						className="text-cyan-900 dark:text-cyan-300 pr-4 font-bold "
+					>
 						Description:
 					</label>
 					<input
@@ -43,11 +49,11 @@ const UpdateTodo = ({ setTodos, todos }) => {
 						id="desc"
 						value={todoInfo.desc}
 						onChange={handleChange}
-						className="bg-cyan-100 px-20 py-4"
+						className="bg-cyan-100 px-20 py-4 focus:outline-none "
 					/>
 				</div>
 				<div className="mb-4 m-auto">
-					<button className="text-left bg-cyan-900 text-lg text-white px-20 py-4">
+					<button className="text-left bg-cyan-900 text-white px-20 py-4">
 						ADD TODO
 					</button>
 				</div>
