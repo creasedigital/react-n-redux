@@ -22,10 +22,10 @@ const UpdateTodo = ({ setTodos, todos }) => {
 	return (
 		<div>
 			<form onSubmit={handleSubmit} className="text-center p-8 mt-4">
-				<div className="mb-4">
+				<div className="mb-4  w-1/2 m-auto flex flex-col">
 					<label
 						htmlFor="name"
-						className="text-cyan-900 dark:text-cyan-300 pr-4 font-bold "
+						className="text-cyan-900 dark:text-cyan-300 mb-2 font-bold "
 					>
 						Enter A Task:
 					</label>
@@ -34,13 +34,13 @@ const UpdateTodo = ({ setTodos, todos }) => {
 						id="name"
 						value={todoInfo.name}
 						onChange={handleChange}
-						className="bg-cyan-100 px-20 py-4 focus:outline-none "
+						className="bg-cyan-100 py-4 focus:outline-none "
 					/>
 				</div>
-				<div className="mb-4">
+				<div className="mb-4  w-1/2 m-auto flex flex-col">
 					<label
 						htmlFor="desc"
-						className="text-cyan-900 dark:text-cyan-300 pr-4 font-bold "
+						className="text-cyan-900 dark:text-cyan-300 mb-2 font-bold "
 					>
 						Description:
 					</label>
@@ -49,11 +49,11 @@ const UpdateTodo = ({ setTodos, todos }) => {
 						id="desc"
 						value={todoInfo.desc}
 						onChange={handleChange}
-						className="bg-cyan-100 px-20 py-4 focus:outline-none "
+						className="bg-cyan-100 py-4 focus:outline-none "
 					/>
 				</div>
-				<div className="mb-4 m-auto">
-					<button className="text-left bg-cyan-900 text-white px-20 py-4">
+				<div className="mb-4 m-auto w1/2">
+					<button className="text-center bg-cyan-900 text-white  px-16 py-4">
 						ADD TODO
 					</button>
 				</div>

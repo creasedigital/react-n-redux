@@ -13,7 +13,10 @@ const TodoItem = ({ todos, removeTodo, setTodos }) => {
 	console.log(todos);
 	const todoList = todos.length ? (
 		todos.map((todo) => (
-			<div className="border rounded-lg mb-4 p-4 bg-gray-200" key={todo.id}>
+			<div
+				className="border rounded-lg mb-4 p-4 dark:bg-slate-800 bg-slate-200"
+				key={todo.id}
+			>
 				<h3>{todo.name}</h3>
 				<p>{todo.desc}</p>
 				<div>

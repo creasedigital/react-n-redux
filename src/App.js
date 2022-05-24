@@ -19,7 +19,7 @@ function App() {
 	}, [todos]);
 
 	return (
-		<div className="bg-white dark:bg-slate-900 text-cyan-900  dark:text-slate-100">
+		<div className="w-screen bg-white dark:bg-slate-900 text-cyan-900  dark:text-slate-100">
 			<h1 className="text-5xl mb-2 py-5 text-cyan-900  dark:text-slate-100 text-center">
 				TODO APP
 			</h1>
