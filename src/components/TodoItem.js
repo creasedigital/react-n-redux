@@ -28,7 +28,7 @@ const TodoItem = ({ todos, removeTodo, setTodos }) => {
 						<span>Status: {todo.activityStatus ? "Done" : "Pending"}</span>
 					</div>
 					<button
-						className="text-center bg-cyan-900 text-white px-4 py-1"
+						className="text-center rounded-md bg-cyan-900 text-white px-4 py-1"
 						onClick={() => removeTodo(todo.id)}
 					>
 						Remove
